@@ -69,7 +69,7 @@ const items = [{
 class MultiSelectExample extends Component {
 
   state = {
-    selectedItems : [];
+    selectedItems : []
   };
 
   
@@ -137,6 +137,7 @@ The component takes 3 compulsory props - `items`, `uniqueKey` and `onSelectedIte
 | itemFontSize | No   | (Number) Font size used for each item in the multi-select drop-down |
 | itemTextColor | No   | (String) Text color for each non-selected item in multi-select drop-down |
 | items      | Yes | (Array, control prop) List of items to display in the multi-select component. JavaScript Array of objects. Each object must contain a name and unique identifier (Check sample above) |
+|noItemsText| No| (String) Text that replace default "no items to display"|
 | onAddItem | No   | (Function) JavaScript function passed in as an argument. The function is called everytime a new item is added, and receives the entire list of items. Here you should ensure that the new items are added to your provided list of `items` in addition to any other consequences of new items being added. |
 | onChangeInput | No    | (Function) JavaScript function passed in as an argument. The function is called everytime `TextInput` is changed with the value. |
 | onClearSelector | No | (Function) JavaScript function passeed in as an argument. The function is called everytime `back button` is pressed |
@@ -151,6 +152,7 @@ The component takes 3 compulsory props - `items`, `uniqueKey` and `onSelectedIte
 | single | No     | (Boolean) Toggles select component between single option and multi option |
 | styleDropdownMenu | No | (Style) Style the view of the dropdown menu |
 | styleDropdownMenuSubsection | No | (Style) Style the inner view of the dropdown menu |
+| styleIndicator | No | (Style) Style the Icon for indicator |
 | styleInputGroup | No | (Style) Style the Container of the Text Input Group |
 | styleItemsContainer | No | (Style) Style the Container of the items that are displayed in a list |
 | styleListContainer | No | (Style) Style the Container of main list. See [this issue] (https://github.com/toystars/react-native-multiple-select/issues/12)|
@@ -159,9 +161,11 @@ The component takes 3 compulsory props - `items`, `uniqueKey` and `onSelectedIte
 | styleSelectorContainer | No | (Style) Style the Container of the Selector when user clicks on the dropdown|
 | styleTextDropdown | No | (Text Style) Style text of the Dropdown |
 | styleTextDropdownSelected | No | (Text Style) Style text of the Dropdown selected |
+| styleTextTag | No | (Text Style) Style text of the tag |
 | submitButtonColor | No   | (String) Background color for submit button  |
 | submitButtonText | No   | (String) Text displayed on submit button  |
 | tagBorderColor | No      | (String) Border color for each selected item  |
+| tagContainerStyle | No | (Style) Style the container of the tag view |
 | tagRemoveIconColor | No      | (String) Color to be used for the remove icon in selected items list |
 | tagTextColor | No  | (String) Text color for selected items list |
 | textColor | No     | (String) Color for selected item name displayed as label for multiselect  |
