@@ -1,18 +1,24 @@
 // Type definitions for react-native-multiple-select
 
 import * as React from "react";
-import { ViewStyle, TextStyle, TextInputProps, StyleProp, FlatListProps } from 'react-native';
+import {
+    ViewStyle,
+    TextStyle,
+    TextInputProps,
+    StyleProp,
+    FlatListProps,
+} from "react-native";
 
 export interface MultiSelectProps {
     single?: boolean;
     selectedItems?: any[];
     items: any[];
-    uniqueKey?: string,
+    uniqueKey?: string;
     tagBorderColor?: string;
     tagTextColor?: string;
     fontFamily?: string;
     tagRemoveIconColor?: string;
-    onSelectedItemsChange: ((items: any[]) => void),
+    onSelectedItemsChange: (items: any[]) => void;
     selectedItemFontFamily?: string;
     selectedItemTextColor?: string;
     itemFontFamily?: string;
@@ -41,7 +47,7 @@ export interface MultiSelectProps {
     textColor?: string;
     fontSize?: number;
     fixedHeight?: boolean;
-    hideTags?: boolean,
+    hideTags?: boolean;
     canAddItems?: boolean;
     onAddItem?: (newItems: any[]) => void;
     onChangeInput?: (text: string) => void;
@@ -49,6 +55,8 @@ export interface MultiSelectProps {
     textInputProps?: TextInputProps;
     flatListProps?: FlatListProps<any>;
     filterMethod?: string;
+    selectedText?: string;
+    noItemsText?: string;
 }
 
 export default class MultiSelect extends React.Component<MultiSelectProps> {
